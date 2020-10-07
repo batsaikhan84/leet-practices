@@ -43,3 +43,15 @@ var shuffle = function(nums, n) {
     }
     return result
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var numIdenticalPairs = function(nums) {
+    let result = 0
+    for (let i=0; i<nums.length; i++) {
+        result += nums.filter((num, index) => num === nums[i] && i < index).length
+    }
+    return result
+};
