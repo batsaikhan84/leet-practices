@@ -55,3 +55,19 @@ var numIdenticalPairs = function(nums) {
     }
     return result
 };
+
+/**
+ * @param {string} address
+ * @return {string}
+ */
+var defangIPaddr = function(address) {
+    let result = []
+    for (let i=0; i<address.length; i++) {
+        if (address[i] === '.') {
+            result.push('[.]')
+        } else {
+            result.push(address[i])
+        }
+    }
+    return result.join('') 
+};
