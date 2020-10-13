@@ -122,3 +122,21 @@ var restoreString = function(s, indices) {
     }
     return Object.values(obj).join('')
 };
+// How Many Numbers Are Smaller Than the Current Number
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var smallerNumbersThanCurrent = function(nums) {
+    let result = []
+    for(c of nums) {
+        let counter = 0
+        nums.map(e => {
+            if (c > e) {
+                counter++
+            }
+        })
+        result.push(counter)
+    }
+    return result
+};
