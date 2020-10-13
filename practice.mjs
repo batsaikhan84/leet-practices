@@ -1,3 +1,4 @@
+// Running Sum of 1d Array
 /**
  * @param {number[]} nums
  * @return {number[]}
@@ -9,7 +10,7 @@ var runningSum = function(nums) {
     }
     return ans
 };
-
+// Kids With the Greatest Number of Candies 
 /**
  * @param {number[]} candies
  * @param {number} extraCandies
@@ -27,7 +28,7 @@ var kidsWithCandies = function(candies, extraCandies) {
     }
     return result
 };
-
+// Shuffle the Array
 /**
  * @param {number[]} nums
  * @param {number} n
@@ -43,7 +44,7 @@ var shuffle = function(nums, n) {
     }
     return result
 };
-
+// Number of Good Pairs
 /**
  * @param {number[]} nums
  * @return {number}
@@ -55,7 +56,7 @@ var numIdenticalPairs = function(nums) {
     }
     return result
 };
-
+// Defanging an IP Address
 /**
  * @param {string} address
  * @return {string}
@@ -71,8 +72,6 @@ var defangIPaddr = function(address) {
     }
     return result.join('') 
 };
-
-
 // Number of Steps to Reduce a Number to Zero
 /**
  * @param {number} num
@@ -90,4 +89,23 @@ var numberOfSteps  = function(num) {
         }
     }
     return counter
+};
+// Maximum Nesting Depth of the Parentheses
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxDepth = function(s) {
+    let counter = 0
+    let max = 0
+    for (char of s) {
+        if (char === '(') {
+            counter++
+            max = Math.max(max, counter)
+        }
+        if (char === ')') {
+            counter--
+        }
+    }
+    return max
 };
