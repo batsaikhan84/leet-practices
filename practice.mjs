@@ -155,3 +155,16 @@ var subtractProductAndSum = function(n) {
     }
     return p - s
 };
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var decompressRLElist = function(nums) {
+    let result = []
+    for(let i=0; i<nums.length-1; i += 2) {
+        let times = parseInt(nums[i])
+        let char = nums[i+1].toString()
+        result.push(...Array(times).fill(char))
+    }
+    return result
+};
