@@ -98,7 +98,7 @@ var numberOfSteps  = function(num) {
 var maxDepth = function(s) {
     let counter = 0
     let max = 0
-    for (char of s) {
+    for (let char of s) {
         if (char === '(') {
             counter++
             max = Math.max(max, counter)
@@ -129,7 +129,7 @@ var restoreString = function(s, indices) {
  */
 var smallerNumbersThanCurrent = function(nums) {
     let result = []
-    for(c of nums) {
+    for(let c of nums) {
         let counter = 0
         nums.map(e => {
             if (c > e) {
@@ -139,4 +139,19 @@ var smallerNumbersThanCurrent = function(nums) {
         result.push(counter)
     }
     return result
+};
+// Subtract the Product and Sum of Digits of an Integer
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function(n) {
+    let p = 1
+    let s = 0
+    for (let c of n.toString().split('')) {
+        c = parseInt(c)
+        p = p * c
+        s = s + c
+    }
+    return p - s
 };
