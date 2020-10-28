@@ -1,8 +1,5 @@
 // Running Sum of 1d Array
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+
 var runningSum = function(nums) {
     let ans = []
     for (let i = 1; i < nums.length+1; i++) {
@@ -11,11 +8,7 @@ var runningSum = function(nums) {
     return ans
 };
 // Kids With the Greatest Number of Candies 
-/**
- * @param {number[]} candies
- * @param {number} extraCandies
- * @return {boolean[]}
- */
+
 var kidsWithCandies = function(candies, extraCandies) {
     let max = Math.max( ...candies )
     let result = []
@@ -29,11 +22,7 @@ var kidsWithCandies = function(candies, extraCandies) {
     return result
 };
 // Shuffle the Array
-/**
- * @param {number[]} nums
- * @param {number} n
- * @return {number[]}
- */
+
 var shuffle = function(nums, n) {
     let result = []
     let x = nums.slice(0, n)
@@ -45,10 +34,7 @@ var shuffle = function(nums, n) {
     return result
 };
 // Number of Good Pairs
-/**
- * @param {number[]} nums
- * @return {number}
- */
+
 var numIdenticalPairs = function(nums) {
     let result = 0
     for (let i=0; i<nums.length; i++) {
@@ -57,10 +43,7 @@ var numIdenticalPairs = function(nums) {
     return result
 };
 // Defanging an IP Address
-/**
- * @param {string} address
- * @return {string}
- */
+
 var defangIPaddr = function(address) {
     let result = []
     for (let i=0; i<address.length; i++) {
@@ -73,10 +56,7 @@ var defangIPaddr = function(address) {
     return result.join('') 
 };
 // Number of Steps to Reduce a Number to Zero
-/**
- * @param {number} num
- * @return {number}
- */
+
 var numberOfSteps  = function(num) {
     let counter = 0
     while (num > 0) {
@@ -91,10 +71,7 @@ var numberOfSteps  = function(num) {
     return counter
 };
 // Maximum Nesting Depth of the Parentheses
-/**
- * @param {string} s
- * @return {number}
- */
+
 var maxDepth = function(s) {
     let counter = 0
     let max = 0
@@ -110,11 +87,7 @@ var maxDepth = function(s) {
     return max
 };
 // Shuffle String
-/**
- * @param {string} s
- * @param {number[]} indices
- * @return {string}
- */
+
 var restoreString = function(s, indices) {
     let obj = {}
     for(let i=0; i<indices.length; i++) {
@@ -123,10 +96,7 @@ var restoreString = function(s, indices) {
     return Object.values(obj).join('')
 };
 // How Many Numbers Are Smaller Than the Current Number
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+
 var smallerNumbersThanCurrent = function(nums) {
     let result = []
     for(let c of nums) {
@@ -141,10 +111,7 @@ var smallerNumbersThanCurrent = function(nums) {
     return result
 };
 // Subtract the Product and Sum of Digits of an Integer
-/**
- * @param {number} n
- * @return {number}
- */
+
 var subtractProductAndSum = function(n) {
     let p = 1
     let s = 0
@@ -155,10 +122,7 @@ var subtractProductAndSum = function(n) {
     }
     return p - s
 };
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+
 var decompressRLElist = function(nums) {
     let result = []
     for(let i=0; i<nums.length-1; i += 2) {
