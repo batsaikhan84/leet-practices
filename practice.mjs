@@ -140,3 +140,19 @@ var createTargetArray = function(nums, index) {
     }
     return result
 };
+// Split a String in Balanced Strings
+var balancedStringSplit = function(s) {
+    let counter = 0
+    let balance = 0
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] == "L") {
+            balance += 1
+        } else {
+            balance -= 1
+        }
+        if (balance == 0) {
+            counter++
+        }
+    }
+    return counter
+};
