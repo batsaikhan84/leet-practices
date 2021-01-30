@@ -1,0 +1,21 @@
+function longestSubarray(arr) {
+    // Write your code here
+    let max = 0
+    let count = 1
+    for (let i=0; i < arr.length; i++) {
+        for (let j=i+1; j < arr.length; j++) {
+            if ((arr[i] - arr[j]) === 0 || Math.abs(arr[i] - arr[j])  === 1) {
+                console.log(count)
+            } else {
+                break
+            }
+        }
+        max = Math.max(count, max)
+        count = 1
+    }
+    console.log(max)
+}
+
+arr = [195593459,195593459,195593458,195593457,195593459,195593459,195593458]
+longestSubarray(arr)
+
