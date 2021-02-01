@@ -16,7 +16,7 @@ function longestSubarray(arr) {
             }
         }
     }
-    console.log(max)
+    return max
 }
 
 arr = [195593459,195593459,195593458,195593457,195593459,195593459,195593458]
