@@ -4,17 +4,7 @@ function longestSubarray(arr) {
     let max = 0
     let count = 1
     for (let i=0; i < arr.length; i++) {
-        tempArr.push(arr[i])
-        for (let j=i+1; j < arr.length; j++) {
-            if (Math.abs(arr[i] - arr[j]) < 2) {
-                tempArr.push(arr[j])
-                console.log(tempArr)
-            } else {
-                break
-            }
-        }
-        max = Math.max(tempArr.length, max)
-        tempArr = []
+        
     }
     // console.log(max)
 }
