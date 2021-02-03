@@ -5,6 +5,7 @@ const findNumber = (arr) => {
             console.log(newArr[i] + 1)
         }
     }
+
 }
 
 // arr = [3,7,1,2,8,4,5]
