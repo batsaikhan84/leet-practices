@@ -1,0 +1,12 @@
+def digitsManipulations(n)
+    sum = 0
+    production = 1
+    arr = n.to_s.split('')
+    arr.map {|num| sum+=num.to_i}
+    arr.map { |num|  production *= num.to_i }
+    return production - sum
+end
+
+n = 123456
+
+puts digitsManipulations(n)
