@@ -4,13 +4,13 @@ const solution = (angles) => {
         if (angles[i] === '>' && i === 0) {
             anglesArr.unshift('<')
         }
-        if (angles[i] === '<' && angles[i+1] ) {
+        if (angles[i] === '<' && ) {
             anglesArr.push('>')
         }
     }
     return anglesArr.join('')
  };
 
- angles = '<<>'
+ angles = '<>'
 
  console.log(solution(angles))
